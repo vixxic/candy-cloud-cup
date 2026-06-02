@@ -33,7 +33,7 @@ body::after {
 body::before {
   width: 300px;
   height: 300px;
-  background: #ee90bf;
+  background: #f4c4e0;
   top: 100px;
   left: -100px;
 }
@@ -41,7 +41,7 @@ body::before {
 body::after {
   width: 350px;
   height: 350px;
-  background: #7fc7ff;
+  background: #cde8ff;
   bottom: 0;
   right: -100px;
 }
@@ -66,7 +66,7 @@ body::after {
 .logo {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #db40a3;
+  color: #b83280;
 }
 
 .navbar ul {
@@ -120,14 +120,14 @@ body::after {
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  background: #ff67b3;
+  background: #d946a5;
   color: white;
 }
 
 .outline {
   background: white !important;
-  color: #ff67b3 !important;
-  border: 2px solid #ff67b3 !important;
+  color: #d946a5 !important;
+  border: 2px solid #d946a5 !important;
 }
 
 .stars {
@@ -229,7 +229,7 @@ body::after {
 }
 
 .about-text h2 {
-  color: #db40a3;
+  color: #b83280;
   width: max-content;
   padding: 4px;
   border-radius: 5px;
@@ -237,7 +237,7 @@ body::after {
 }
 
 .about-text p {
-  color: #575757;
+  color: #5d5760;
   line-height: 1.8;
   margin-top: 2em;
   margin-right: 2em;
@@ -290,7 +290,7 @@ body::after {
 .flavors-header h2 {
   font-size: 3rem;
 
-  background: linear-gradient(90deg, #d63cb5, #e84bbe, #ff74c8);
+  background: linear-gradient(90deg, #b83280, #d946a5, #f065b8);
 
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -331,7 +331,7 @@ body::after {
 
   border-radius: 999px;
 
-  background: linear-gradient(to bottom, #d63cb5, #ff74c8);
+  background: linear-gradient(to bottom, #b83280, #d946a5);
 }
 
 /* Item */
@@ -359,13 +359,13 @@ body::after {
 
   background: white;
 
-  border: 6px solid #e84bbe;
+  border: 6px solid #d946a5;
 
   z-index: 2;
 
   box-shadow:
-    0 0 0 10px rgba(232, 75, 190, 0.15),
-    0 10px 25px rgba(232, 75, 190, 0.25);
+    0 0 0 10px rgba(217, 70, 165, 0.15),
+    0 10px 25px rgba(217, 70, 165, 0.25);
 }
 
 /* Gambar */
@@ -393,15 +393,10 @@ body::after {
 
 .flavor-info {
   background: white;
-
   padding: 2.5rem;
-
   border-radius: 32px;
-
   position: relative;
-
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
-
   transition: 0.3s;
 }
 
@@ -411,70 +406,50 @@ body::after {
 
 .flavor-info span {
   position: absolute;
-
   top: -10px;
   right: 20px;
-
   font-size: 5rem;
   font-weight: 800;
-
-  color: #ffe0f2;
-
+  color: #f7d2e7;
   user-select: none;
 }
 
 .flavor-info h3 {
   font-size: 2rem;
-
-  color: #d63cb5;
-
+  color: #b83280;
   margin-bottom: 1rem;
 }
 
 .flavor-info p {
   line-height: 1.8;
-  color: #666;
+  color: #6d6670;
 }
 
 /* Background Glow */
 
 .flavors-section::before {
   content: "";
-
   position: absolute;
-
   width: 500px;
   height: 500px;
-
   border-radius: 50%;
-
-  background: rgba(232, 75, 190, 0.12);
-
+  background: rgba(217, 70, 165, 0.08);
   filter: blur(120px);
-
   top: -200px;
   left: -200px;
-
   z-index: -1;
 }
 
 .flavors-section::after {
   content: "";
-
   position: absolute;
-
   width: 500px;
   height: 500px;
-
   border-radius: 50%;
-
-  background: rgba(255, 116, 200, 0.12);
-
+  background: rgba(91, 168, 229, 0.08);
   filter: blur(120px);
-
   bottom: -200px;
   right: -200px;
-
   z-index: -1;
 }
 
@@ -548,11 +523,11 @@ body::after {
   font-size: 3rem;
   margin-bottom: 1rem;
 
-  color: #db40a3;
+  color: #b83280;
 }
 
 .segment-header p {
-  color: #7a6a8a;
+  color: #726a74;
   line-height: 1.8;
   font-size: 1.1rem;
 }
@@ -562,36 +537,29 @@ body::after {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.8rem;
 }
-
 .segment-card {
-  background: linear-gradient(180deg, #fff8fc 0%, #ffeef8 100%);
-
+  background: linear-gradient(180deg, #fff9fc 0%, #fff2f8 100%);
   border-radius: 32px;
   padding: 2rem;
-
-  border: 2px solid rgba(255, 122, 198, 0.15);
-
+  border: 2px solid rgba(217, 70, 165, 0.12);
   box-shadow:
-    0 15px 35px rgba(255, 122, 198, 0.12),
-    0 8px 20px rgba(139, 92, 246, 0.08);
+    0 15px 35px rgba(217, 70, 165, 0.08),
+    0 8px 20px rgba(91, 168, 229, 0.06);
 
   backdrop-filter: blur(12px);
-
   transition: all 0.35s ease;
 }
 
 .segment-card:hover {
   transform: translateY(-10px);
-
-  border-color: rgba(232, 75, 190, 0.4);
-
+  border-color: rgba(184, 50, 128, 0.35);
   box-shadow:
-    0 20px 40px rgba(255, 51, 201, 0.25),
-    0 10px 20px rgba(214, 60, 181, 0.15);
+    0 20px 40px rgba(217, 70, 165, 0.18),
+    0 10px 20px rgba(217, 70, 165, 0.12);
 }
 
 .segment-card h3 {
-  color: #d63cb5;
+  color: #b83280;
   font-weight: 700;
 }
 
@@ -606,7 +574,7 @@ body::after {
   padding: 5rem 8% 2rem;
   text-align: center;
 
-  background: linear-gradient(135deg, #d63cb5 0%, #e84bbe 50%, #ff9ad8 100%);
+  background: linear-gradient(135deg, #b83280 0%, #d946a5 50%, #f065b8 100%);
 
   color: white;
 }

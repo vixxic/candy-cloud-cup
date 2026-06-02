@@ -405,10 +405,10 @@ function App() {
 
           <div className="social-links">
             <a href="#">
-              <span style={{ color: "#cacaca" }}>Insta</span> @Candy.C
+              <span style={{ color: "#ffd5ea" }}>Insta</span> @Candy.C
             </a>
             <a href="#">
-              <span style={{ color: "#cacaca" }}>Tiktok</span> @Cup.candy
+              <span style={{ color: "#ffd5ea" }}>Tiktok</span> @Cup.candy
             </a>
           </div>
         </div>
