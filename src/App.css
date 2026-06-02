@@ -431,6 +431,10 @@ footer {
   .bubble-img {
     height: 100%;
   }
+
+  .new-img {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -448,5 +452,9 @@ footer {
 
   .logo {
     font-size: 1.4rem;
+  }
+
+  .new-img {
+    display: none;
   }
 }

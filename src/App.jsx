@@ -1,6 +1,31 @@
 import "./App.css";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 function App() {
+  useEffect(() => {
+    gsap
+      .timeline()
+      .from(".tlt", {
+        stagger: 0.2,
+        y: 100,
+        ease: "power1.out",
+        opacity: 0,
+        duration: 0.2,
+      })
+      .from(".tlt-des", {
+        opacity: 0,
+        y: 100,
+        ease: "power1.out",
+        duration: "0.2",
+      })
+      .from(".hero-btns", { opacity: 0, duration: 1 })
+      .from(".new", {
+        scale: 0,
+        duration: 1,
+        ease: "elastic.out(1, 0.5)",
+      });
+  }, []);
   return (
     <>
       <nav className="navbar fredoka-font">
@@ -24,25 +49,55 @@ function App() {
 
       <section id="home" className="hero fredoka-font">
         <h1>
-          <span style={{ color: "#41a3e0 " }}>C</span>
-          <span style={{ color: "#de3fcc " }}>A</span>
-          <span style={{ color: "#db40a3 " }}>N</span>
-          <span style={{ color: "#41a3e0 " }}>D</span>
-          <span style={{ color: "#de3fcc " }}>Y</span>
+          <span className="tlt" style={{ color: "#41a3e0 " }}>
+            C
+          </span>
+          <span className="tlt" style={{ color: "#de3fcc " }}>
+            A
+          </span>
+          <span className="tlt" style={{ color: "#db40a3 " }}>
+            N
+          </span>
+          <span className="tlt" style={{ color: "#41a3e0 " }}>
+            D
+          </span>
+          <span className="tlt" style={{ color: "#de3fcc " }}>
+            Y
+          </span>
           <br />
-          <span style={{ color: "#db40a3 " }}>C</span>
-          <span style={{ color: "#41a3e0 " }}>L</span>
-          <span style={{ color: "#de3fcc " }}>O</span>
-          <span style={{ color: "#db40a3 " }}>U</span>
-          <span style={{ color: "#41a3e0 " }}>D</span>
-          <span style={{ color: "#de3fcc " }}>Y</span>
+          <span className="tlt" style={{ color: "#db40a3 " }}>
+            C
+          </span>
+          <span className="tlt" style={{ color: "#41a3e0 " }}>
+            L
+          </span>
+          <span className="tlt" style={{ color: "#de3fcc " }}>
+            O
+          </span>
+          <span className="tlt" style={{ color: "#db40a3 " }}>
+            U
+          </span>
+          <span className="tlt" style={{ color: "#41a3e0 " }}>
+            D
+          </span>
+          <span className="tlt" style={{ color: "#de3fcc " }}>
+            Y
+          </span>
           <span> </span>
-          <span style={{ color: "#db40a3 " }}>C</span>
-          <span style={{ color: "#41a3e0 " }}>U</span>
-          <span style={{ color: "#de3fcc " }}>P</span>
+          <span className="tlt" style={{ color: "#db40a3 " }}>
+            C
+          </span>
+          <span className="tlt" style={{ color: "#41a3e0 " }}>
+            U
+          </span>
+          <span className="tlt" style={{ color: "#de3fcc " }}>
+            P
+          </span>
         </h1>
 
-        <p>✨Manisnya awan, Segarnya minuman! Bahagianya kamu!🩷</p>
+        <p className="tlt-des">
+          ✨Manisnya awan, Segarnya minuman! Bahagianya kamu!🩷
+        </p>
 
         <div className="hero-btns">
           <button>Explore Flavors</button>
