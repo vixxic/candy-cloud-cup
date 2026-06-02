@@ -1,0 +1,28 @@
+.hero-section {
+  background-color: white;
+  width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.hero-section h1 {
+  font-size: clamp(80px, 10em, 20em);
+  margin: 0%;
+  text-align: center;
+}
+
+.title-con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-line {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
