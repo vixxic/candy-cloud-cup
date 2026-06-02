@@ -64,6 +64,15 @@ function App() {
         start: "top 70%",
       },
     });
+
+    gsap.from(".card", {
+      stagger: 0.2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".card",
+        start: "20% bottom",
+      },
+    });
   }, []);
   return (
     <>
@@ -163,8 +172,10 @@ function App() {
         <div className="about-content">
           <div className="about-text">
             <div className="about-text-tlt">
-              <h2>Minuman Manis ❤️</h2>
-              <h2>Moment Manis!</h2>
+              <h2>
+                Minuman Manis ❤️ <br />
+                Moment Manis!
+              </h2>
             </div>
 
             <p>
@@ -184,23 +195,23 @@ function App() {
       </section>
 
       <section id="flavors" className="flavors">
-        <h2>Favorite Flavors</h2>
+        <h2 className="fredoka-font flavor-title">Favorite Flavors</h2>
 
         <div className="flavor-grid">
           <div className="card berry">
-            <h3>Berry Blast</h3>
+            <img src="/berryBlast.png"></img>
           </div>
 
           <div className="card ocean">
-            <h3>Blue Ocean</h3>
+            <img src="/blueOcean.png"></img>
           </div>
 
           <div className="card lemon">
-            <h3>Lemon Frizz</h3>
+            <img src="/lemonFrizz.png"></img>
           </div>
 
           <div className="card peach">
-            <h3>Peach Blush</h3>
+            <img src="/peachBlush.png"></img>
           </div>
         </div>
       </section>
