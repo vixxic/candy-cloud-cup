@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   const aboutRef = useRef();
+  const sectionRef = useRef();
 
   useEffect(() => {
     gsap
@@ -82,6 +83,60 @@ function App() {
       scrollTrigger: {
         trigger: ".card",
         start: "20% bottom",
+      },
+    });
+
+    gsap.from(".berry-img", {
+      opacity: 0,
+      x: -100,
+      ease: "power1.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".berry-img",
+        start: "top 70%",
+      },
+    });
+
+    gsap.from(".ocean-img", {
+      opacity: 0,
+      x: 100,
+      ease: "power1.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".ocean-img",
+        start: "top 70%",
+      },
+    });
+
+    gsap.from(".lemon-img", {
+      opacity: 0,
+      x: -100,
+      ease: "power1.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".lemon-img",
+        start: "top 70%",
+      },
+    });
+
+    gsap.from(".peach-img", {
+      opacity: 0,
+      x: 100,
+      ease: "power1.out",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".peach-img",
+        start: "top 70%",
+      },
+    });
+
+    gsap.from(".segment-grid", {
+      stagger: 0.2,
+      y: 100,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".segment-grid",
+        start: "top 60%",
       },
     });
   }, []);
@@ -205,7 +260,11 @@ function App() {
         </div>
       </section>
 
-      <section className="flavors-section" id="flavors">
+      <section
+        ref={sectionRef}
+        className="flavors-section fredoka-font"
+        id="flavors"
+      >
         <div className="flavors-header">
           <h2>🍭 Pilihan Rasa CloudSip</h2>
           <p>
@@ -216,7 +275,7 @@ function App() {
 
         <div className="flavors-timeline">
           <div className="flavor-showcase">
-            <div className="flavor-image">
+            <div className="flavor-image berry-img">
               <img src="/berryBlast.png" alt="Berry Blast" />
             </div>
 
@@ -244,13 +303,13 @@ function App() {
 
             <div className="timeline-dot"></div>
 
-            <div className="flavor-image">
+            <div className="flavor-image ocean-img">
               <img src="/blueOcean.png" alt="Blue Ocean" />
             </div>
           </div>
 
           <div className="flavor-showcase">
-            <div className="flavor-image">
+            <div className="flavor-image lemon-img">
               <img src="/lemonFrizz.png" alt="Lemon Frizz" />
             </div>
 
@@ -278,7 +337,7 @@ function App() {
 
             <div className="timeline-dot"></div>
 
-            <div className="flavor-image">
+            <div className="flavor-image peach-img">
               <img src="/peachBlush.png" alt="Peach Plush" />
             </div>
           </div>
