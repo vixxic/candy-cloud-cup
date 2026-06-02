@@ -50,7 +50,6 @@ function App() {
       scrollTrigger: {
         trigger: ".about",
         start: "top 70%",
-        markers: true,
       },
     });
 
@@ -63,7 +62,6 @@ function App() {
       scrollTrigger: {
         trigger: ".product-img-container",
         start: "top 70%",
-        markers: true,
       },
     });
   }, []);
