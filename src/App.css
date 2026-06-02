@@ -92,10 +92,13 @@ body::after {
 
   text-align: center;
   padding: 0 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero h1 {
-  font-size: 8rem;
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.95;
 }
 
 .hero p {
@@ -103,6 +106,7 @@ body::after {
   margin-top: 20px;
   color: #666;
   line-height: 1.8;
+  font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .hero-btns {
@@ -124,6 +128,82 @@ body::after {
   background: white !important;
   color: #ff67b3 !important;
   border: 2px solid #ff67b3 !important;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.new {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  opacity: 0.7;
+  animation: float 4s ease-in-out infinite;
+}
+
+.new-img {
+  position: absolute;
+  animation: float 4s ease-in-out infinite;
+  width: 200px;
+  top: 15%;
+  left: 20%;
+}
+
+.s1 {
+  width: 80px;
+  top: 15%;
+  left: 10%;
+}
+
+.s2 {
+  width: 70px;
+  top: 25%;
+  right: 15%;
+}
+
+.s3 {
+  width: 60px;
+  top: 55%;
+  left: 8%;
+}
+
+.s4 {
+  width: 20px;
+  top: 65%;
+  right: 10%;
+}
+
+.s5 {
+  width: 15px;
+  top: 10%;
+  left: 40%;
+}
+
+.s6 {
+  width: 22px;
+  top: 75%;
+  left: 30%;
+}
+
+.s7 {
+  width: 28px;
+  top: 35%;
+  right: 35%;
+}
+
+.s8 {
+  width: 16px;
+  top: 85%;
+  right: 45%;
 }
 
 /* sec about */
@@ -150,7 +230,7 @@ body::after {
 }
 
 .about-text {
-  min-width: 50%;
+  max-width: 500px;
 }
 
 .about-text h2 {
@@ -158,29 +238,53 @@ body::after {
   width: max-content;
   padding: 4px;
   border-radius: 5px;
-  font-size: 5em;
+  font-size: 4em;
 }
 
 .about-text p {
-  color: #666;
+  color: #575757;
   line-height: 1.8;
   margin-top: 2em;
   margin-right: 2em;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .product-img-container {
   position: relative;
-  flex: 1;
-  min-width: 50%;
+  width: 100%;
+  max-width: 500px;
+  min-height: 500px;
 }
 
-.product-img-container img {
+.product-img {
   position: absolute;
+  width: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .bubble-img {
-  z-index: 100;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-15px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* flavor */
@@ -188,6 +292,7 @@ body::after {
 .flavors {
   padding: 120px 8%;
   text-align: center;
+  background-color: #db40a3;
 }
 
 .flavors h2 {
@@ -202,9 +307,16 @@ body::after {
 }
 
 .card {
-  padding: 50px 20px;
-  border-radius: 24px;
-  transition: 0.3s;
+  padding: 2rem;
+  min-height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h3 {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
 }
 
 .card:hover {
@@ -237,25 +349,104 @@ footer {
 
 /* responsif */
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .about {
+@media (max-width: 900px) {
+  .about-content {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 3rem;
   }
 
-  .navbar ul {
-    gap: 15px;
-    font-size: 0.9rem;
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text p {
+    margin-right: 0;
+  }
+
+  .new-img {
+    display: none;
+  }
+
+  .about-text-tlt {
+    display: flex;
   }
 }
 
-@media (max-width: 500px) {
-  .navbar {
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-btns {
     flex-direction: column;
-    gap: 1em;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .hero-btns button {
+    width: 100%;
+  }
+
+  .about-text h2 {
+    width: auto;
+    font-size: 2.5rem;
+  }
+
+  .product-img-container {
+    min-height: 350px;
+  }
+
+  .bubble-img {
+    width: 100%;
+  }
+
+  .product-img {
+    width: 65%;
+  }
+
+  .s1,
+  .s2,
+  .s3 {
+    width: 35px;
+  }
+
+  .s4,
+  .s5,
+  .s6,
+  .s7,
+  .s8 {
+    width: 20px;
+  }
+
+  .product-img-container {
+    max-height: 800px;
+    min-height: 500px;
+  }
+
+  .product-img {
+    height: 100%;
+  }
+
+  .bubble-img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
   }
 }

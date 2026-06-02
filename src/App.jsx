@@ -49,27 +49,33 @@ function App() {
           <button className="outline">Order Now</button>
         </div>
 
-        <div class="stars">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className="new">
+          <img src="/new.png" className="new-img"></img>
+        </div>
+
+        <div className="stars">
+          <img src="/bintang.png" className="star s1" />
+          <img src="/bintang.png" className="star s2" />
+          <img src="/bintang.png" className="star s3" />
+          <img src="/bintang.png" className="star s4" />
+          <img src="/bintang.png" className="star s5" />
+          <img src="/bintang.png" className="star s6" />
+          <img src="/bintang.png" className="star s7" />
+          <img src="/bintang.png" className="star s8" />
         </div>
       </section>
 
       <section id="about" className="about fredoka-font">
         <div className="about-content">
           <div className="about-text">
-            <h2>Minuman Manis ❤️</h2>
-            <h2>Moment Manis!</h2>
+            <div className="about-text-tlt">
+              <h2>Minuman Manis ❤️</h2>
+              <h2>Moment Manis!</h2>
+            </div>
 
             <p>
               Perpaduan soda segar, sirup buah pilihan, dan cotton candy lembut
-              yang menciptakan pengalaman minum yang unik, seru, dan pastinya
+              yang menciptakan pengalaman minum yang unik, seru, dan pastinya{" "}
               <span>Instagramanle!!</span>.
             </p>
           </div>
