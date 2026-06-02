@@ -2,6 +2,7 @@ import "./App.css";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -9,6 +10,19 @@ function App() {
   const sectionRef = useRef();
 
   useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.8,
+      smoothWheel: true,
+    });
+
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
     gsap
       .timeline()
       .to(".star", {
@@ -77,15 +91,6 @@ function App() {
       },
     });
 
-    gsap.from(".card", {
-      stagger: 0.2,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: ".card",
-        start: "20% bottom",
-      },
-    });
-
     gsap.from(".berry-img", {
       opacity: 0,
       x: -100,
@@ -139,6 +144,10 @@ function App() {
         start: "top 60%",
       },
     });
+
+    ScrollTrigger.refresh();
+
+    return () => lenis.destroy;
   }, []);
   return (
     <>
