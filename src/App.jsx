@@ -10,13 +10,24 @@ function App() {
   useEffect(() => {
     gsap
       .timeline()
-      .from(".tlt", {
-        stagger: 0.2,
-        y: 100,
-        ease: "power1.out",
-        opacity: 0,
-        duration: 0.2,
+      .to(".star", {
+        y: -15,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
       })
+      .from(
+        ".tlt",
+        {
+          stagger: 0.2,
+          y: 100,
+          ease: "power1.out",
+          opacity: 0,
+          duration: 0.2,
+        },
+        "<",
+      )
       .from(".tlt-des", {
         opacity: 0,
         y: 100,
@@ -194,33 +205,151 @@ function App() {
         </div>
       </section>
 
-      <section id="flavors" className="flavors">
-        <h2 className="fredoka-font flavor-title">Favorite Flavors</h2>
+      <section className="flavors-section" id="flavors">
+        <div className="flavors-header">
+          <h2>🍭 Pilihan Rasa CloudSip</h2>
+          <p>
+            Temukan rasa favoritmu dan nikmati sensasi cotton candy yang meleleh
+            di setiap tegukan.
+          </p>
+        </div>
 
-        <div className="flavor-grid">
-          <div className="card berry">
-            <img src="/berryBlast.png"></img>
+        <div className="flavors-timeline">
+          <div className="flavor-showcase">
+            <div className="flavor-image">
+              <img src="/berryBlast.png" alt="Berry Blast" />
+            </div>
+
+            <div className="timeline-dot"></div>
+
+            <div className="flavor-info">
+              <span>01</span>
+              <h3>Berry Blast</h3>
+              <p>
+                Ledakan rasa berry yang manis dan segar untuk menemani setiap
+                momen spesialmu.
+              </p>
+            </div>
           </div>
 
-          <div className="card ocean">
-            <img src="/blueOcean.png"></img>
+          <div className="flavor-showcase reverse">
+            <div className="flavor-info">
+              <span>02</span>
+              <h3>Blue Ocean</h3>
+              <p>
+                Sensasi segar yang terinspirasi dari birunya lautan dan langit
+                yang menenangkan.
+              </p>
+            </div>
+
+            <div className="timeline-dot"></div>
+
+            <div className="flavor-image">
+              <img src="/blueOcean.png" alt="Blue Ocean" />
+            </div>
           </div>
 
-          <div className="card lemon">
-            <img src="/lemonFrizz.png"></img>
+          <div className="flavor-showcase">
+            <div className="flavor-image">
+              <img src="/lemonFrizz.png" alt="Lemon Frizz" />
+            </div>
+
+            <div className="timeline-dot"></div>
+
+            <div className="flavor-info">
+              <span>03</span>
+              <h3>Lemon Frizz</h3>
+              <p>
+                Perpaduan rasa lemon yang cerah dengan sentuhan cotton candy
+                yang unik dan menyegarkan.
+              </p>
+            </div>
           </div>
 
-          <div className="card peach">
-            <img src="/peachBlush.png"></img>
+          <div className="flavor-showcase reverse">
+            <div className="flavor-info">
+              <span>04</span>
+              <h3>Peach Plush</h3>
+              <p>
+                Rasa peach yang lembut dan manis seperti awan yang meleleh di
+                mulut.
+              </p>
+            </div>
+
+            <div className="timeline-dot"></div>
+
+            <div className="flavor-image">
+              <img src="/peachBlush.png" alt="Peach Plush" />
+            </div>
           </div>
         </div>
       </section>
 
-      <footer id="footer">
-        <h3>Candy Cloud Cup</h3>
-        <p>Drink The Sweetest Cloud ☁️</p>
-        <p>@candy.cup</p>
-        <p>© 2026 Candy Cloud Cup</p>
+      <section className="segment-section fredoka-font">
+        <div className="segment-header">
+          <h2>Made for Sweet Moments</h2>
+          <p>
+            Baik saat belajar, berkumpul bersama teman, atau mengabadikan momen
+            spesial, CloudSip siap menambahkan sentuhan manis di setiap
+            kesempatan.
+          </p>
+        </div>
+
+        <div className="segment-grid">
+          <div className="segment-card">
+            <h3>📚 Teman Belajar</h3>
+            <p>
+              Menemani sesi belajar dan waktu istirahat dengan rasa yang
+              menyenangkan.
+            </p>
+          </div>
+
+          <div className="segment-card">
+            <h3>🎉 Nongkrong Bareng</h3>
+            <p>
+              Membuat momen bersama teman jadi lebih seru, berwarna, dan
+              berkesan.
+            </p>
+          </div>
+
+          <div className="segment-card">
+            <h3>📸 Pecinta Konten</h3>
+            <p>
+              Tampilan estetik dan unik yang siap mempercantik foto maupun
+              video.
+            </p>
+          </div>
+
+          <div className="segment-card">
+            <h3>🍭 Pencinta Manis</h3>
+            <p>
+              Pilihan sempurna untuk kamu yang menyukai camilan dan minuman
+              manis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer fredoka-font">
+        <div className="footer-content">
+          <h2>☁️ Yuk Coba CloudSip Sekarang!</h2>
+
+          <p>
+            Rasakan sensasi manis cotton candy yang meleleh di setiap tegukan.
+            Cocok untuk menemani belajar, nongkrong, maupun momen spesialmu.
+          </p>
+
+          <p className="footer-tagline">Satu tegukan, sejuta momen manis. 💖</p>
+
+          <div className="social-links">
+            <a href="#">📸 @Candy.C</a>
+            <a href="#">🎵 @Cup.candy</a>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© 2026 CloudSip. All Rights Reserved.</p>
+        </div>
       </footer>
     </>
   );
