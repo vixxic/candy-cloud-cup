@@ -156,6 +156,9 @@ function App() {
             <a href="#flavors">Flavors</a>
           </li>
           <li>
+            <a href="#segment">Segment</a>
+          </li>
+          <li>
             <a href="#footer">Contact</a>
           </li>
         </ul>
@@ -344,7 +347,7 @@ function App() {
         </div>
       </section>
 
-      <section className="segment-section fredoka-font">
+      <section id="segment" className="segment-section fredoka-font">
         <div className="segment-header">
           <h2>Made for Sweet Moments</h2>
           <p>
@@ -389,7 +392,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="footer fredoka-font">
+      <footer id="footer" className="footer fredoka-font">
         <div className="footer-content">
           <h2>☁️ Yuk Coba CloudSip Sekarang!</h2>
 
@@ -401,8 +404,12 @@ function App() {
           <p className="footer-tagline">Satu tegukan, sejuta momen manis. 💖</p>
 
           <div className="social-links">
-            <a href="#">📸 @Candy.C</a>
-            <a href="#">🎵 @Cup.candy</a>
+            <a href="#">
+              <span style={{ color: "#cacaca" }}>Insta</span> @Candy.C
+            </a>
+            <a href="#">
+              <span style={{ color: "#cacaca" }}>Tiktok</span> @Cup.candy
+            </a>
           </div>
         </div>
 
