@@ -77,7 +77,7 @@ body::after {
 
 .navbar a {
   text-decoration: none;
-  color: #555;
+  color: #44393e;
 }
 
 /* hero */
@@ -104,7 +104,7 @@ body::after {
 .hero p {
   max-width: 650px;
   margin-top: 20px;
-  color: #666;
+  color: #676062;
   line-height: 1.8;
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
@@ -224,11 +224,6 @@ body::after {
   padding: 100px 8%;
 }
 
-.about img {
-  width: 400px;
-  max-width: 100%;
-}
-
 .about-text {
   max-width: 500px;
 }
@@ -256,18 +251,11 @@ body::after {
   min-height: 500px;
 }
 
-.product-img {
-  position: absolute;
-  width: 75%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.bubble-img {
+.triproduct-img {
   position: absolute;
   width: 100%;
   left: 50%;
+  top: 20%;
   transform: translateX(-50%);
   z-index: 2;
   animation: floating 4s ease-in-out infinite;

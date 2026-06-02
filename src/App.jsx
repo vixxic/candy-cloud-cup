@@ -1,8 +1,12 @@
 import "./App.css";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 function App() {
+  const aboutRef = useRef();
+
   useEffect(() => {
     gsap
       .timeline()
@@ -17,14 +21,51 @@ function App() {
         opacity: 0,
         y: 100,
         ease: "power1.out",
-        duration: "0.2",
+        duration: 0.2,
       })
       .from(".hero-btns", { opacity: 0, duration: 1 })
       .from(".new", {
         scale: 0,
         duration: 1,
         ease: "elastic.out(1, 0.5)",
-      });
+      })
+      .to(
+        ".new",
+        {
+          y: -15,
+          duration: 2,
+          repeat: -1,
+          yoyo: true,
+          ease: "power1.inOut",
+        },
+        ">=1",
+      );
+
+    gsap.from(".about-text", {
+      opacity: 0,
+      x: -100,
+      duration: 1,
+      ease: "power1.out",
+
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 70%",
+        markers: true,
+      },
+    });
+
+    gsap.from(".product-img-container", {
+      opacity: 0,
+      x: 100,
+      duration: 1,
+      ease: "power1.out",
+
+      scrollTrigger: {
+        trigger: ".product-img-container",
+        start: "top 70%",
+        markers: true,
+      },
+    });
   }, []);
   return (
     <>
@@ -120,7 +161,7 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="about fredoka-font">
+      <section ref={aboutRef} id="about" className="about fredoka-font">
         <div className="about-content">
           <div className="about-text">
             <div className="about-text-tlt">
@@ -131,16 +172,15 @@ function App() {
             <p>
               Perpaduan soda segar, sirup buah pilihan, dan cotton candy lembut
               yang menciptakan pengalaman minum yang unik, seru, dan pastinya{" "}
-              <span>Instagramanle!!</span>.
+              <span>Instagramable!!</span>.
             </p>
           </div>
           <div className="product-img-container">
-            <img src="/bubble.png" alt="bubble" className="bubble-img"></img>
             <img
-              src="/product.png"
-              alt="Candy Cloud Cup"
-              className="product-img"
-            />
+              src="/triProduct.png"
+              alt="product"
+              className="triproduct-img"
+            ></img>
           </div>
         </div>
       </section>
